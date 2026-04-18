@@ -7,82 +7,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-
-        :root {
-            --bg: #050505;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --accent: linear-gradient(90deg, #ff0000, #0051ff);
-            --text: #ffffff;
-        }
-
+        :root { --bg: #050505; --accent: linear-gradient(90deg, #ff0000, #0051ff); --text: #ffffff; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
-
-        /* Navbar Style */
-        nav { padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; background: var(--accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-
-        /* Hero Section */
-        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; position: relative; }
-        .hero::before { content: ''; position: absolute; width: 300px; height: 300px; background: #0051ff; filter: blur(150px); opacity: 0.2; top: 10%; left: 20%; z-index: -1; }
-        .hero::after { content: ''; position: absolute; width: 300px; height: 300px; background: #ff0000; filter: blur(150px); opacity: 0.15; bottom: 10%; right: 20%; z-index: -1; }
-
-        .hero h1 { font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; color: #a1a1aa; max-width: 600px; margin-bottom: 30px; }
-        
-        .btn { padding: 15px 35px; background: var(--accent); border-radius: 50px; text-decoration: none; color: white; font-weight: 600; transition: 0.3s; box-shadow: 0 10px 20px rgba(0, 81, 255, 0.2); }
-        .btn:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0, 81, 255, 0.4); }
-
-        /* Features Section */
-        .features { padding: 100px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--card-bg); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); transition: 0.4s; }
-        .card:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.06); transform: translateY(-10px); }
-        .card i { font-size: 2rem; margin-bottom: 20px; background: var(--accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card h3 { font-size: 1.5rem; margin-bottom: 15px; font-weight: 600; }
-        .card p { color: #a1a1aa; }
-
-        /* Footer */
-        footer { text-align: center; padding: 50px; border-top: 1px solid rgba(255,255,255,0.1); color: #71717a; font-size: 0.9rem; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-            .features { padding: 50px 5%; }
-        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        nav { padding: 20px 10%; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: center; }
+        .logo { font-weight: 800; font-size: 1.8rem; background: var(--accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero { padding: 100px 20px; text-align: center; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; margin-bottom: 20px; }
+        .hero span { color: #ff0000; }
+        .hero p { font-size: 1.2rem; color: #a1a1aa; max-width: 800px; margin: 0 auto 30px; }
+        .details-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 40px; border-radius: 24px; max-width: 900px; margin: 0 auto; text-align: left; }
+        .details-box h2 { color: #0051ff; margin-bottom: 15px; font-size: 1.8rem; }
+        .details-box ul { list-style: none; margin-top: 20px; }
+        .details-box ul li { margin-bottom: 12px; padding-left: 30px; position: relative; color: #d1d1d6; }
+        .details-box ul li::before { content: '✓'; position: absolute; left: 0; color: #ff0000; font-weight: bold; }
+        .footer { text-align: center; padding: 50px; color: #71717a; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; }
     </style>
 </head>
 <body>
-
-    <nav>
-        <div class="logo">GlobalCash Network</div>
-    </nav>
-
+    <nav><div class="logo">GlobalCash Network</div></nav>
     <section class="hero">
-        <h1>Empowering the <br>Next Gen Earners.</h1>
-        <p>The premium infrastructure for worldwide digital monetization. Optimized for USA, UK, India, and Bangladesh.</p>
-        <a href="#" class="btn">Explore Network</a>
+        <h1>Global Vision. <span>Local Impact.</span></h1>
+        <p>The premium infrastructure for worldwide digital monetization. Specially optimized for <b>USA, UK, India, and Bangladesh</b> markets.</p>
+        <div class="details-box">
+            <h2>Our Project Concept</h2>
+            <p>GlobalCash Network is an upcoming Telegram-based Mini App designed to reward users for completing high-value CPA and CPI tasks. We bridge the gap between global advertisers and active earners.</p>
+            <ul>
+                <li><b>Multi-Country Support:</b> Specialized offers for Bangladesh, India, USA, and UK.</li>
+                <li><b>Smart Offerwalls:</b> Automated detection for regional high-paying tasks.</li>
+                <li><b>Incentive Traffic:</b> High-quality user engagement through our reward system.</li>
+                <li><b>Fast Payouts:</b> Optimized gateway for seamless global transactions.</li>
+            </ul>
+        </div>
     </section>
-
-    <div class="features">
-        <div class="card">
-            <i class="fas fa-bolt"></i>
-            <h3>High Speed Payouts</h3>
-            <p>Our network ensures that every lead is tracked accurately and paid out faster than any other platform.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-layer-group"></i>
-            <h3>Smart Offerwalls</h3>
-            <p>Intelligent algorithm that detects user location and displays the highest paying campaigns automatically.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-fingerprint"></i>
-            <h3>Anti-Fraud System</h3>
-            <p>Advanced security layers to protect our publishers and advertisers from any malicious activities.</p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 GlobalCash Network &bull; Managed by Global Experts</p>
-    </footer>
-
+    <footer><p>&copy; 2026 GlobalCash Network &bull; Ready for the Next Generation</p></footer>
 </body>
 </html>
